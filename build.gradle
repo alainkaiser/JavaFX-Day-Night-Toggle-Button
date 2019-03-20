@@ -1,0 +1,39 @@
+group 'ch.fhnw'
+version '0.1'
+
+apply plugin: 'java'
+
+sourceCompatibility = JavaVersion.VERSION_11
+targetCompatibility = JavaVersion.VERSION_11
+
+compileJava.options.encoding = 'UTF-8'
+
+repositories {
+	mavenCentral()
+	maven {
+		url "https://repo.eclipse.org/content/repositories/paho-releases/"
+	}
+}
+
+sourceSets {
+	main {
+		resources {
+			srcDirs = ["src/main/java", "src/main/resources"]
+		}
+	}
+}
+
+dependencies {
+	compile fileTree(dir: 'libs', include: ['*.jar'])
+	testImplementation('org.junit.jupiter:junit-jupiter:5.4.0')
+	// https://mvnrepository.com/artifact/org.controlsfx/controlsfx
+	compile group: 'org.controlsfx', name: 'controlsfx', version: '9.0.0'
+
+}
+
+test {
+	useJUnitPlatform()
+	testLogging {
+		events "passed", "skipped", "failed"
+	}
+}

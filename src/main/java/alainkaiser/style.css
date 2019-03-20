@@ -1,0 +1,38 @@
+.day-night-toggle-button {
+    -fx-padding: 5px;
+    -fx-background-color: rgb(224,224,224);
+    -base-color: rgb(2, 138, 204);
+}
+
+.day-night-toggle-button .background-rectangle {
+    -fx-fill: rgb(72,72,72);
+    -fx-stroke: rgb(32,32,32);
+    -fx-stroke-width: 4px;
+    -fx-cursor: hand;
+}
+
+.day-night-toggle-button .background-rectangle-active {
+    -fx-fill: rgb(191, 230, 247);
+    -fx-stroke: rgb(128, 193, 215);
+    -fx-stroke-width: 4px;
+}
+
+.day-night-toggle-button .toggle-circle {
+    -fx-fill: rgb(255,253,241);
+    -fx-stroke: rgb(225,229,196);
+    -fx-stroke-width: 4px;
+    -fx-cursor: hand;
+}
+
+.day-night-toggle-button .toggle-circle-active {
+    -fx-fill: rgb(245, 237, 40);
+    -fx-stroke: rgb(228, 198, 63);
+    -fx-stroke-width: 4px;
+    -fx-cursor: hand;
+}
+
+.simple-control .display {
+    -fx-font-family: 'Lato Light';
+    -fx-font-size: 24px;
+    -fx-fill: derive(-base-color, 95%);
+}
